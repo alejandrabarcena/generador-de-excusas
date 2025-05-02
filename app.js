@@ -1,16 +1,14 @@
-function generateExcuse() {
-    let who = ['El perro', 'Mi abuela', 'El cartero', 'Mi pájaro'];
-    let action = ['comió', 'orinó sobre', 'aplastó', 'rompió'];
-    let what = ['mi tarea', 'mi celular', 'el coche', 'mis lentes'];
-    let when = ['antes de clase', 'mientras dormía', 'durante el almuerzo', 'mientras rezaba'];
+window.onload = function () {
+    let who = ['Mi gato', 'El cartero', 'Mi jefe', 'La vecina'];
+    let action = ['rompió', 'comió', 'pintó', 'mojó'];
+    let what = ['mi tarea', 'el contrato', 'la laptop', 'el desayuno'];
+    let when = ['mientras dormía', 'antes de la reunión', 'en el almuerzo', 'durante la lluvia'];
   
-    const random = arr => arr[Math.floor(Math.random() * arr.length)];
+    let excuse = `${who[Math.floor(Math.random() * who.length)]} ` +
+                 `${action[Math.floor(Math.random() * action.length)]} ` +
+                 `${what[Math.floor(Math.random() * what.length)]} ` +
+                 `${when[Math.floor(Math.random() * when.length)]}.`;
   
-    const excuse = `${random(who)} ${random(action)} ${random(what)} ${random(when)} 😬`;
-  
-    document.getElementById('excuse').innerText = excuse;
-  }
-  
-  // Generar excusa automáticamente al cargar
-  window.onload = generateExcuse;
+    document.getElementById("excuse").innerText = excuse;
+  };
   
